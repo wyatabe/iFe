@@ -1,0 +1,38 @@
+page-vender {
+    .scroll-content {
+        padding: 0px !important;
+    }
+
+    .grid {
+        padding: 18px;
+    }
+
+    .col {
+        padding: 5px 5px 10px 5px;
+    }
+
+    .texto {
+        font-size: 26px;
+        font-weight: 600;
+        text-align: left;
+        color: #ffffff;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        bottom: 0px;
+        padding: 26px 0px 0px 110px;
+        vertical-align: middle;
+    }
+
+    .titulo {
+        font-size: 32px;
+        font-weight: 600;
+        text-align: center;
+        color: #ffffff;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        bottom: 0px;
+        padding-top: 15px;
+    };
+}

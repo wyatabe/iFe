@@ -1,0 +1,88 @@
+page-extrato {
+    .scroll-content {
+        padding: 0px !important;
+    }
+
+    .titulo {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 32px;
+        font-weight: 600;
+        text-align: center;
+        color: #ffffff;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        bottom: 0px;
+        padding-top: 15px;
+    };
+
+    .slide-image {
+        max-height: 60%;
+        max-width: 60%;
+        margin: 14px 0;
+    }
+
+    .swiper-pagination-bullet {
+        border-radius: 100%;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background: #2d3f60;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: #ffffff;
+        opacity: 1;
+    }
+
+    .cartao-texto {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        text-align: center;
+        color: #ffffff;    
+        b {
+          color: #00ff1d;
+        }
+        margin-top: -10px;
+    }
+
+    .texto-lancamentos {
+        width: 100%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 24px;
+        font-weight: 600;
+        text-align: center;
+        color: #ffffff;
+        margin-top: 12px;
+        margin-bottom: 4px;
+        letter-spacing: 1px;
+    }
+
+    .texto-total {
+        width: 100%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        text-align: center;
+        color: #ffffff;
+        margin-top: 3px;
+        margin-bottom: 0px;
+        letter-spacing: 0px;
+    }
+
+    .tabela {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 12px;
+        border-radius: 14px;
+        background-color: #2d3f60;
+        border-style: solid;
+        border-width: 4px;
+        border-color: #ffffff;
+        color: #ffffff;
+        padding: 5px 6px 5px 6px;
+      }
+    
+}

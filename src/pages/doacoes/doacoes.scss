@@ -1,0 +1,115 @@
+page-doacoes {
+    .scroll-content {
+        padding: 0px !important;
+    }
+
+    .titulo {
+        font-size: 32px;
+        font-weight: 600;
+        text-align: center;
+        color: #ffffff;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        bottom: 0px;
+        padding-top: 15px;
+    }
+
+    ion-list {
+        display: inline-flex;
+    }
+
+    .list .item-radio .radio-icon {
+        background-color: rgb(233, 233, 241);
+        color: white;
+        width: 25px;
+        height: 25px;
+        border-radius: 100%;
+        background-color: #2d3f60;
+        border-width: 2px;
+        border-color: #ffffff;
+    }
+
+    .radio .radio-inner {
+        background-color: #2d3f60;
+    }
+
+    .radio .radio-checked .radio-inner {
+        left: 7px;
+        top: 4px;
+        position: absolute;
+        width: 7px;
+        height: 10px;
+        border-width: 2px;
+        border-top-width: 0;
+        border-left-width: 0;
+        border-style: solid;
+        border-color: #ffffff;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        background-color: #2d3f60;
+        border-radius: 0%;
+    }
+
+    .list .item-block .item-inner {
+        border-bottom: 0px;
+        width: 120px;
+    }
+
+    .item-radio.item ion-label {
+        margin-left: 0;
+        font-size: 18px;
+        font-weight: 600;
+        text-align: left;
+        color: #2d3f60;
+        text-shadow: None;
+    }
+
+    .item-radio-checked.item ion-label {
+        color: #ffffff;
+        text-shadow: 0px 1.5px 3px #000000;
+    }
+
+    .item .radio[item-left], .item .radio[item-start] {
+        margin: 8px 12px 8px 3px;
+    }
+
+    .contribuicao {
+        font-size: 22px;
+        margin-bottom: 8px;
+        text-align: left;
+        margin-left: 3px;
+    }
+
+    .checkbox {
+        margin: 2px 6px 0px 0px !important;
+    }
+    
+    .checkbox .checkbox-checked .checkbox-inner {
+        left: 5px;
+        top: 1px;
+        width: 4px;
+        height: 10px;
+    }
+
+    .label {
+        font-size: 18px;
+        font-weight: 600;
+        text-align: left;
+        width: 100%;
+    }
+
+    ion-list.list {
+        width: 100%;
+    }
+
+    .item-checkbox {
+        margin-top: 10px;
+        margin-left: 15px;
+    }
+
+    ion-list.list {
+        width: 100%;
+        border-radius: 30px;
+    }
+}

@@ -1,0 +1,78 @@
+<!--
+  Generated template for the CadastroPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding style="background-image: url(assets/imgs/fundo.png)">
+  <form [formGroup]="cadastroForm" (ngSubmit)="cadastrar()">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12>
+          <ion-input type="tel" autocomplete="off" autocorrect="off" class="input-rounded" placeholder="CEP" formControlName="cep" [brmasker]="{mask:'00000-000', len:9}" (input)="onInputCep()"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-12>
+          <ion-input type="text" class="input-rounded" placeholder="Endereço" formControlName="logradouro"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-4>
+          <ion-input type="tel" autocomplete="off" autocorrect="off" class="input-rounded" placeholder="Número" formControlName="numero" [brmasker]="{mask:'00000', len:5}"></ion-input>
+        </ion-col>
+        <ion-col col-8>
+          <ion-input type="text" class="input-rounded" placeholder="Complemento" formControlName="complemento"></ion-input>
+        </ion-col>      
+      </ion-row>
+      <ion-row>
+        <ion-col col-8>
+          <ion-input type="text" class="input-rounded" placeholder="Cidade" formControlName="localidade"></ion-input>
+          <input type="text" formControlName="municipioCodigo" style="display: none;"/>
+        </ion-col>
+        <ion-col col-4>
+          <ion-select class="select-rounded" placeholder="UF" formControlName="uf">
+            <ion-option *ngFor="let uf of ufList" [value]="uf.sigla">{{uf.sigla}}</ion-option>
+          </ion-select>
+        </ion-col>      
+      </ion-row>
+      <ion-row>
+        <ion-col col-12>
+          <ion-input type="text" class="input-rounded" placeholder="Bairro" formControlName="bairro"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-9>    
+          <ion-input type="tel" autocomplete="off" autocorrect="off" class="input-rounded" placeholder="Número do Cartão" [brmasker]="{mask:'0000 0000 0000 0000', len:19}" formControlName="cartaoNumero" (input)="onInputCartaoNumero()"></ion-input>
+        </ion-col>
+        <ion-col col-3>
+          <img src="assets/imgs/{{bandeira !=null ? bandeira : 'default'}}.svg" class="slide-image"/>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-7>
+          <ion-input type="tel" autocomplete="off" autocorrect="off" class="input-rounded" placeholder="Data de Validade" [brmasker]="{mask:'00/00', len:5}" formControlName="cartaoDataExpiracao"></ion-input>
+        </ion-col>
+        <ion-col col-5>
+          <ion-input type="tel" autocomplete="off" autocorrect="off" class="input-rounded" placeholder="CVV" [brmasker]="{mask:'000', len:3}" formControlName="cartaoCodigo"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-12>
+          <ion-input type="text" class="input-rounded" placeholder="Nome Impresso no Cartão" formControlName="cartaoNome"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row style="text-align: center">
+        <ion-col col-12>
+          <button class="button-rounded" ion-button round type="submit">Cadastrar</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

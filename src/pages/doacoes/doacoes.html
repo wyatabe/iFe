@@ -1,0 +1,89 @@
+<!--
+  Generated template for the DoacoesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content style="background-image: url(assets/imgs/fundo.png)">
+  <img src="assets/imgs/doacoes_bar.png" />
+  <div class="titulo">
+    DOAÇÕES
+  </div>
+  <ion-grid style="padding: 0px 10px 0px 10px;">
+    <form [formGroup]="doacaoForm" (ngSubmit)="pagamento()">
+      <ion-row>
+        <ion-col style="padding: 14px;" center text-center>
+          <ion-list radio-group formControlName="tipoDoacao">
+            <ion-item>
+              <ion-label>Dízimo</ion-label>
+              <ion-radio item-left value="1"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label>Oferta</ion-label>
+              <ion-radio item-left value="2"></ion-radio>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col style="padding: 10px;" center text-center>
+          <ion-input type="tel" class="input-rounded" placeholder="Valor" [brmasker]="{money: true}" formControlName="valor"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col style="padding: 14px;" center text-center>
+          <ion-label class="contribuicao">
+            Contribuição:
+          </ion-label>
+          <ion-list radio-group formControlName="tipoContribuicao">
+            <ion-item>
+              <ion-label>Mensal</ion-label>
+              <ion-radio item-left value="1"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label>Única</ion-label>
+              <ion-radio item-left value="2"></ion-radio>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col style="padding: 14px;" center text-center>
+          <ion-list radio-group formControlName="formaPagamento">
+            <ion-item>
+              <ion-label>Cartão de
+                <br>Crédito</ion-label>
+              <ion-radio item-left value="1"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label>Boleto
+                <br>Bancário</ion-label>
+              <ion-radio item-left value="2"></ion-radio>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-list>
+            <ion-item>
+              <ion-label style="margin-left: 10px">Confirmo os dados acima</ion-label>
+              <ion-checkbox color="secondary" formControlName="confirmacao"></ion-checkbox>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+      <ion-row style="text-align: center; margin-top: 20px">
+        <ion-col col-12>
+          <button class="button-rounded" ion-button round type="submit">OK</button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-grid>
+</ion-content>

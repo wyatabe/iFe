@@ -1,0 +1,61 @@
+<!--
+  Generated template for the ExtratoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding style="background-image: url(assets/imgs/fundo.png)">
+  <img src="assets/imgs/extrato_bar.png" />
+  <div class="titulo">
+    MEU EXTRATO
+  </div>
+  <ion-grid style="padding: 0 16px;">
+    <ion-row style="height: 193px">
+      <ion-col center text-center>
+        <ion-slides pager (ionSlideDidChange)="slideChanged()">
+          <ion-slide *ngFor="let cartao of cartoes">
+            <img data-src="assets/imgs/cartao-{{cartao.id}}.png" class="slide-image">
+          </ion-slide>
+        </ion-slides>
+        <div class="cartao-texto" [innerHTML]="textoCartao"></div>
+      </ion-col>
+    </ion-row>
+    <!--
+    <ion-row>
+      <ion-col center text-center>
+        <div class="texto-lancamentos">LANÇAMENTOS</div>
+        <progress-bar [progress]="progress"></progress-bar>
+        <div class="texto-total">TOTAL - R$ 1000,00</div>
+      </ion-col>
+    </ion-row>
+    -->
+    <ion-row>
+      <ion-col>
+        <div class="texto-lancamentos">LANÇAMENTOS</div>
+        <ion-grid class="tabela">
+          <ion-row *ngFor="let lancamento of lancamentos" justify-content-start>
+            <ion-col col-3>
+              {{lancamento.data}}
+            </ion-col>
+            <ion-col col-auto>
+              {{lancamento.descricao}}
+            </ion-col>
+            <ion-col style="text-align: right;">
+              {{lancamento.valor}}
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <div class="texto-total">SALDO: R$ 400,00</div>
+        </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

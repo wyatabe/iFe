@@ -1,0 +1,73 @@
+<ion-content  style="background-image: url(assets/imgs/fundo.png)">
+  <ion-toolbar no-border-top>
+    <ion-title></ion-title>
+    <button ion-button menuToggle right (click)="logout()">
+      <ion-icon name="log-out"></ion-icon>Sair
+    </button>
+  </ion-toolbar>
+
+  <ion-grid padding="10px">
+    <ion-row>
+      <ion-col center text-center>
+        <div class="rectangle">
+          <div class="data">
+            <div class="layer">{{day}}</div>
+            <div class="mes">{{monthName}}</div>
+          </div>
+          <ion-scroll scrollY="true" style="width: 100%; height: 100%" class="scroll-mensagem">
+            <div class="mensagem">
+              {{texto}}
+              <p style="text-align: right; font-weight: bold;">{{versiculo}}</p>
+            </div>
+        </ion-scroll>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row style="margin-top: 40px">
+      <ion-col center text-center>
+        <img src="assets/imgs/quero_icon.png" />
+        <div class="texto-menu">QUERO TE
+          <br> ESCUTAR</div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col center text-center>
+        <img src="assets/imgs/voce_icon.png" (click)="showVoce()" />
+        <div class="texto-menu">VOCÊ</div>
+      </ion-col>
+      <ion-col center text-center>
+  
+      </ion-col>
+      <ion-col center text-center>
+        <img src="assets/imgs/caixa_icon.png" />
+        <div class="texto-menu">CAIXA DE
+          <br> PROMESSAS</div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col center text-center>
+        <img src="assets/imgs/igreja_icon.png" />
+        <div class="texto-menu">IGREJAS</div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col center text-center (click)="showDoacoes()">
+        <img src="assets/imgs/doacoes_icon.png" />
+        <div class="texto-menu">DOAÇÕES</div>
+      </ion-col>
+      <ion-col center text-center>
+  
+      </ion-col>
+      <ion-col center text-center>
+        <img src="assets/imgs/midias_icon.png" />
+        <div class="texto-menu">MÍDIAS</div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col center text-center>
+        <img src="assets/imgs/loja_icon.png" />
+        <div class="texto-menu">LOJA</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

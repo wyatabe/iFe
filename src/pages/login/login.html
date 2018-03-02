@@ -1,0 +1,62 @@
+<!--
+  Generated template for the WelcomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-content style="background-image: url(assets/imgs/fundo_login.png)">
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <ion-grid class="margin-top">
+      <ion-row>
+        <ion-col center text-center>
+          <img width="160" src="assets/imgs/logo.png" />
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col center text-center>
+          <img width="100" src="assets/imgs/logo_ife.svg" class="logo" />
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col center text-center>
+          <ion-input formControlName="email" type="email" style="width: 280px;" class="input-rounded" placeholder="meu@email.com.br" #emailInput></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col center text-center>
+          <ion-input formControlName="senha" type="password" style="width: 280px;" class="input-rounded" placeholder="Senha" #senhaInput></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col center text-center>
+              <ion-list>
+                <ion-item style="width: 215px; margin: 0px auto;">
+                    <ion-label>Manter conectado</ion-label>
+                    <ion-toggle class="manter" (ionChange)="manterConectado = !manterConectado"></ion-toggle>
+                </ion-item>
+              </ion-list>
+              
+          </ion-col>
+        </ion-row>
+      <ion-row>
+        <ion-col center text-center>
+          <button class="button-rounded" ion-button round type="submit">
+            Entrar
+          </button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col center text-center>
+          <a href="#" (click)="signup()">Não tem uma conta ainda?
+            <br>Cadastre aqui</a>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col center text-center>
+          <a href="#" class="esqueci-minha-senha" (click)="showPrompt()">Esqueci minha senha</a>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

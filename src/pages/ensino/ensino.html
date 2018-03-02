@@ -17,7 +17,7 @@
   </div>
   <ion-card *ngFor="let item of videos">
     <video width="100%" controls>
-      <source src="{{item.url}}" type="video/mp4" />
+      <source [id]="id" src="{{item.url}}" type="video/mp4" />
     </video>
     <ion-card-content>
       <ion-card-title>
